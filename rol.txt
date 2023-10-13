@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+
+namespace SPOJ
+{
+     class Program
+     {
+         public static void Main()
+         {
+             int t = int.Parse(Console.ReadLine());
+             for (int i = 0; i < t; i++)
+             {
+                 Queue<string> kolejka = new Queue<string>(Console.ReadLine().Split(' '));
+                kolejka.Dequeue();
+                var item = kolejka.Dequeue();
+                kolejka.Enqueue(item);
+                foreach(var x in kolejka)
+                {
+                    Console.Write(x + " ");
+                }
+                Console.WriteLine();
+             }
+         }
+     }
+}
